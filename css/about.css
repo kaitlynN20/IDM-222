@@ -1,0 +1,43 @@
+img.picMe{
+	width:100%;
+	height: auto;
+}
+
+@media (min-width: 320px) {
+	
+	.text{
+		font-size: 150%;
+		text-align: center;
+	}
+
+	img.picMe{
+		padding-top: 2em;
+	}
+}
+
+@media (min-width: 600px){
+
+	img.picMe{
+		width:40%;
+		margin: 4em;
+		margin-bottom: 0;
+	}
+
+	.text{
+		font-size: 120%;
+		text-align: left;
+	}
+}
+
+@media (min-width: 900px){
+
+	img.picMe{
+		margin: 2em;
+		margin-bottom: 0;
+		width:35%;
+	}
+
+	.text{
+		font-size: 150%;
+	}
+}
