@@ -1,0 +1,60 @@
+/*Style Applied to All pages */
+* { box-sizing: border-box; }
+
+html, body{
+	margin:0;
+	padding:0;
+	font-size: 100%;
+}
+
+.row {
+  overflow: auto;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+@media screen and (min-width: 320px){
+	[class*="col-"]{background-color: #9ee27f;}
+	/*.col-1 ul li:first-child{display:none;}*/
+}
+
+@media screen and (min-width: 600px){
+	[class*="col-"]{background-color: #f4ce42;}
+	.col-1 ul li:first child{display: block;}
+}
+
+[class*="col-"] {
+  background-color: rgba(45, 157, 192, 0.2);
+  border: 1px solid #2d9dc0;
+  padding: 16px;
+  width: 100%;
+}
+
+
+/*NAV BAR */
+
+.col-1 ul li{
+	display:inline;
+	list-style: none;
+	text-decoration: none;
+}
+
+.col-1 ul li a:link, visted{
+	text-decoration: none;
+	color:black;
+}
+
+.col-1 ul li a:hover{
+	color:pink;
+}
+
+footer{
+	position: fixed;
+	text-align: center;
+}
+
+
