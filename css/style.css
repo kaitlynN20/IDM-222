@@ -1,60 +1,76 @@
-/*Style Applied to All pages */
-* { box-sizing: border-box; }
+/*FONTS*/
+@font-face {
+    font-family: 'vanillaregular';
+    src: url('../fonts/vanilla-webfont.woff2') format('woff2'),
+         url('../fonts/vanilla-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-html, body{
+}
+
+@font-face {
+    font-family: 'soft_marshmallowregular';
+    src: url('../fonts/soft_marshmallow-webfont.woff2') format('woff2'),
+         url('../fonts/soft_marshmallow-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*END OF FONTS*/
+
+*{box-sizing: border-box;}
+
+html{
+	background-image: url(../images/background-min.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-size: 100%
+}
+
+h1{font-family: 'soft_marshmallowregular';}
+
+.nav{ font-family: 'vanillaregular';}
+
+.nav{
+	list-style:none;
 	margin:0;
 	padding:0;
-	font-size: 100%;
+	background-color: white;
+	
+	display: -webkit-box;
+ 	display: -moz-box;
+ 	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
 }
 
-.row {
-  overflow: auto;
-}
+.nav a{height:auto;}
+.nav img{width:30%; margin:auto; height:auto;}
 
-.row::after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
-@media screen and (min-width: 320px){
-	[class*="col-"]{background-color: #9ee27f;}
-	/*.col-1 ul li:first-child{display:none;}*/
-}
-
-@media screen and (min-width: 600px){
-	[class*="col-"]{background-color: #f4ce42;}
-	.col-1 ul li:first child{display: block;}
-}
-
-[class*="col-"] {
-  background-color: rgba(45, 157, 192, 0.2);
-  border: 1px solid #2d9dc0;
-  padding: 16px;
-  width: 100%;
-}
-
-
-/*NAV BAR */
-
-.col-1 ul li{
-	display:inline;
-	list-style: none;
-	text-decoration: none;
-}
-
-.col-1 ul li a:link, visted{
-	text-decoration: none;
-	color:black;
-}
-
-.col-1 ul li a:hover{
+.nav a{
 	color:pink;
-}
-
-footer{
-	position: fixed;
+	display: block;
+	padding: 1rem;
 	text-align: center;
+	text-decoration: none;
 }
 
+.title{text-align: center;}
 
+/*800px*/@media all and (min-width: 50rem){
+	.nav {
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+
+	justify-content: space-around;
+}
+	.nav img{width:50%;}
+
+	.nav a{font-size: 200%;}
+	
+}

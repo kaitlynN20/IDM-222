@@ -1,4 +1,23 @@
-/*WORK PAGE*/
-.col-2 h1{
+h1.workHeader{text-align: center;}
+
+.content{
+	display:flex;
+	flex-flow:column wrap;
+
 	text-align: center;
+	margin:auto;
+}
+
+.content img{width:70%;}
+.content h3{font-size: 200%;}
+
+
+/*800px*/@media all and (min-width: 50rem){
+	.content{flex-flow: row nowrap;}
+
+	.content a:hover{
+		border-style: solid;
+		border-color: white;
+		border-width: thick;
+	}
 }

@@ -1,0 +1,14 @@
+.wrapper{text-align: center;}
+h1.artHeader{font-size: 200%}
+
+.content{
+	display: flex;
+	flex-flow: row wrap;
+
+	justify-content: center;
+	align-content: space-between;
+}
+
+.content img{
+	padding: 1rem;
+}
