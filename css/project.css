@@ -1,0 +1,48 @@
+@import 'style.css';
+
+body{background-color: #F79C84;}
+
+.wrapper p{color: #36123B;}
+
+.wrapper .header p{
+	font-family: 'blackout2_am';
+	font-size:5rem;
+
+	padding:0;
+	margin: 0;
+
+	padding-bottom: 2rem;
+	text-align: center
+}
+
+.wrapper .header p:first-child{padding-top: 2rem;}
+
+.wrapper .project{
+	width:100%;
+	text-align: center;
+}
+
+.wrapper .paragraph{
+	font-family: 'folksregular';
+	font-size: 4rem;
+
+	padding:0;
+	margin:0;
+
+	padding-left:3.5rem;
+	padding-right: 3rem;
+	padding-bottom: 3rem;
+}
+
+
+.wrapper .arrows{
+	position: fixed;
+	z-index: 999;
+
+	top:35rem;	
+}
+
+.wrapper .arrows a img.arrow01{margin-right: 31.5rem;}
+
+.wrapper .arrows a img{width: 10%;}
+

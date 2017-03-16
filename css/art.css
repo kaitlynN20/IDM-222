@@ -1,14 +1,60 @@
-.wrapper{text-align: center;}
-h1.artHeader{font-size: 200%}
+@import 'style.css';
 
-.content{
+body{
+	background-color:#65C18D;
+	background-image: linear-gradient(#65C18D, #3FA6D4 95%);
+}
+
+.wrapper{height:200vh;}
+
+.wrapper p{
+	font-family: 'blackout2_am';
+	font-size: 5rem;
+	color: #36123B;
+
+	 margin: 0;
+	 padding: 0;
+	 padding-bottom: 5rem;
+	 
+	 padding-top: .5rem;
+	 padding-left: 4rem;
+}
+
+
+.pictures p{
+	font-size: 2rem;
+	font-family: 'blackoutmidnight';
+	text-align: center;
+	
+	width: 100%;
+	padding: 0;
+	margin: 0;
+
+	padding-top:1rem;
+}
+
+.pictures {
 	display: flex;
 	flex-flow: row wrap;
 
-	justify-content: center;
-	align-content: space-between;
 }
 
-.content img{
-	padding: 1rem;
+
+.pitures .left p{padding-bottom: 3rem;}
+.pictures .right p{padding-bottom: 3rem;}
+
+.pictures .left{
+	padding-right: 2rem;
+	padding-left: 2.5rem;
+}
+
+.pictures .last{
+	text-align: center;
+	width: 100%;
+}
+
+footer{
+  text-align: center;
+  width: 100%;
+  height: 4rem;
 }

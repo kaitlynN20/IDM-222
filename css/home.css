@@ -1,0 +1,187 @@
+@import 'style.css';
+
+section {
+  min-height: 100vh;
+}
+
+#homepage {background-color: #F9BF5D;}
+
+#homepage img{
+  padding-top: 15rem;
+  padding-left: 4rem;
+
+}
+
+#homepage p{
+  font-family: 'blackout2_am';
+  color: #36123B;
+  font-size: 2rem;
+
+  text-align: center;
+
+  padding: 0;
+  margin: 0;
+}
+
+#homepage p.name{
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+
+  font-size: 4rem;
+}
+
+
+#work {  
+  background-image:
+    linear-gradient(#F9BF5D,#36123B);
+
+  text-align: center;
+}
+
+#work p{ 
+  font-family: 'blackout2_am'; 
+  color: white;
+  font-size: 3rem;
+
+  margin: 0;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+#work a{
+  width:361px;
+  height:427px;
+}
+
+#work a img.web{
+  padding-top: 5rem;
+}
+
+#work a img.art{
+  padding-top: 2rem;
+}
+
+#about{ background-color: #36123B;}
+
+#about img{
+ padding-left: 7rem;
+ padding-top: 4rem;
+ padding-bottom: 2rem;
+
+ width: 80%;
+}
+
+#about p{
+  padding-left: 4rem;
+  padding-right: 4rem;
+  
+  font-family: 'folksregular';
+  color:white;
+  font-size: 1.5rem;
+}
+
+
+/*NAV */
+nav {
+  height: 9rem;
+  position: fixed;
+  right: 11rem;
+  top: 1rem;
+  width: 3.13rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li{ padding-right: 2rem;}
+
+nav ul li.homeIcon{padding-right:3rem;}
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 2rem;
+}
+
+nav ul li a::before{
+  font-size: 2rem;
+}
+
+nav ul li.homeIcon a::before{content: url('../img/home_icon.png');}
+nav ul li.workIcon a::before {content: url('../img/portfolio_icon.png');}
+nav ul li.aboutIcon a::before{content: url('../img/about_icon.png');}
+
+
+nav ul li.homeIcon a:hover::before {content: url('../img/homeIcon_hover.png');}
+nav ul li.workIcon a:hover::before {content: url('../img/portfolioIcon_hover.png');}
+nav ul li.aboutIcon a:hover::before {content: url('../img/aboutIcon_hover.png');}
+
+
+footer{
+  text-align: center;
+  width: 100%;
+  height: 4rem;
+}
+
+
+/*750px*/ @media all and (min-width: 45rem){
+  
+  #homepage img{
+    padding-left: 7rem;
+  }
+
+  #work a img.web{
+    padding-top: 3rem;
+  }
+
+  #work a img.art{
+    padding-top: 1rem;
+  }
+
+  #about img{
+    padding-left: 8.5rem;
+    width: 80%; 
+  }
+
+  #about p{
+    padding-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  #about .des{
+    padding-bottom: 3rem;
+  }
+
+
+}
+
+
+/*1000px*/ @media all and (min-width:70rem){
+  #homepage img{
+    float: left;
+  }
+
+  #homepage .title{
+    float: right;
+
+    padding-top: 20rem;
+    padding-right: 10rem;
+  }
+
+  #work{
+    display: flex;
+    justify-content: space-around;
+
+    padding-top: 10rem;
+  }
+
+  #work .artLink{
+    top: 3rem;
+  }
+
+}
