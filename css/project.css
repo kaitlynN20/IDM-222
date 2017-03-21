@@ -4,22 +4,46 @@ body{background-color: #F79C84;}
 
 .wrapper p{color: #36123B;}
 
+.wrapper{
+	display: flex;
+	flex-flow: column wrap;
+
+}
+
+.wrapper .header{display: block;}
+
 .wrapper .header p{
 	font-family: 'blackout2_am';
-	font-size:5rem;
+	font-size:4rem;
 
 	padding:0;
 	margin: 0;
 
 	padding-bottom: 2rem;
-	text-align: center
+	text-align: center;
 }
 
-.wrapper .header p:first-child{padding-top: 2rem;}
+.wrapper .header p:first-child {
+	padding-top: 2rem;
+	font-size: 5rem;
+}
+
+.wrapper #compare p{
+	font-family: 'folksregular';
+	font-size: 1.5rem;
+	color:white;
+
+	padding: 0;
+	margin: 0;
+	padding-top:.5rem;
+	padding-bottom: 1rem;
+}
 
 .wrapper .project{
 	width:100%;
 	text-align: center;
+
+	padding-bottom: 3rem;
 }
 
 .wrapper .paragraph{
@@ -29,20 +53,71 @@ body{background-color: #F79C84;}
 	padding:0;
 	margin:0;
 
-	padding-left:3.5rem;
-	padding-right: 3rem;
-	padding-bottom: 3rem;
-}
 
+	margin-left: 5rem;
+	margin-right: 5rem;
+
+}
 
 .wrapper .arrows{
 	position: fixed;
 	z-index: 999;
 
-	top:35rem;	
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
 }
 
-.wrapper .arrows a img.arrow01{margin-right: 31.5rem;}
+/*css for links*/
+.wrapper .link{
+	text-align: center;
+	padding-bottom: 2rem;
 
-.wrapper .arrows a img{width: 10%;}
+	z-index: 9999;
+}
 
+.wrapper .link a{
+	width:100%;
+	height: 100%;
+}
+
+/*css for coming soon text */
+
+.wrapper #cs p{
+	font-family:'blackoutmidnight';
+	font-size: 5rem;
+	color:white;
+
+	text-align: center;
+}
+
+
+
+
+/*750px*/ @media all and (min-width: 45rem){
+.wrapper .paragraph{
+	font-size: 2rem;
+	text-align: center;
+}
+
+
+}
+
+/*1000px*/ @media all and (min-width:70rem){
+
+	.wrapper .arrows a img:hover{
+		-webkit-animation:grow 1s linear;
+   		-moz-animation:grow 1s linear;
+		animation:grow 1s linear;
+    	animation-timing-function: ease-out;
+
+	}
+
+	 @-moz-keyframes grow { 100% { -moz-transform: scale(1.3); } }
+    @-webkit-keyframes grow { 100% { -webkit-transform: scale(1.3); } }
+    @keyframes grow { 100% { -webkit-transform: scale(1.3); transform:scale(1.3); } }
+}

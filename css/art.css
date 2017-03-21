@@ -1,11 +1,30 @@
 @import 'style.css';
 
-body{
+.wrapper{
 	background-color:#65C18D;
 	background-image: linear-gradient(#65C18D, #3FA6D4 95%);
+
+    /* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
+  background-image:
+    -webkit-gradient(linear from(#65C18D), to(#3FA6D4 95%));
+  
+  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background-image:
+    -webkit-linear-gradient(#65C18D,#3FA6D4 95%);
+
+  /* Firefox 3.6 - 15 */
+  background-image:
+    -moz-linear-gradient(#65C18D, #3FA6D4 95%);
+
+  /* Opera 11.1 - 12 */
+  background-image:
+    -o-linear-gradient( #65C18D, #3FA6D4 95%);
+
+  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-image:
+    linear-gradient(#65C18D, #3FA6D4 95%);
 }
 
-.wrapper{height:200vh;}
 
 .wrapper p{
 	font-family: 'blackout2_am';
@@ -20,6 +39,34 @@ body{
 	 padding-left: 4rem;
 }
 
+/*Only for web*/
+#webColor{
+	background-color:#3FA6D4;
+	background-image: linear-gradient(#3FA6D4,#65C18D 95%);
+
+
+    /* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
+  background-image:
+    -webkit-gradient(linear from(#3FA6D4), to(#65C18D95%));
+  
+  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background-image:
+    -webkit-linear-gradient(#3FA6D4,#65C18D 95%);
+
+  /* Firefox 3.6 - 15 */
+  background-image:
+    -moz-linear-gradient(#3FA6D4, #65C18D 95%);
+
+  /* Opera 11.1 - 12 */
+  background-image:
+    -o-linear-gradient( #3FA6D4 #65C18D 95%);
+
+  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-image:
+    linear-gradient(#3FA6D4, #65C18D 95%);
+
+	height:94vh;
+}
 
 .pictures p{
 	font-size: 2rem;
@@ -37,24 +84,39 @@ body{
 	display: flex;
 	flex-flow: row wrap;
 
+	justify-content: space-around;
+	align-items: center;
+
 }
 
-
-.pitures .left p{padding-bottom: 3rem;}
-.pictures .right p{padding-bottom: 3rem;}
-
-.pictures .left{
-	padding-right: 2rem;
-	padding-left: 2.5rem;
-}
 
 .pictures .last{
 	text-align: center;
 	width: 100%;
 }
 
-footer{
-  text-align: center;
-  width: 100%;
-  height: 4rem;
+
+/*1000px*/ @media all and (min-width: 70rem){
+	.pictures{
+		margin-left:11rem;
+		margin-right:12rem;
+
+	}
+
+	.pictures p{padding-bottom: 3rem;}
+
+	/*spinny animation*/
+	.pictures a img:hover{
+	-webkit-animation:spin 1s linear;
+    -moz-animation:spin 1s linear;
+    animation:spin 1s linear;
+    animation-timing-function: ease-out;
+	}
+
+	@-moz-keyframes spin { 100% { -moz-transform: rotate(180deg); } }
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(180deg); } }
+	@keyframes spin { 100% { -webkit-transform: rotate(180deg); transform:rotate(180deg); } }
+	@-ms-keyframes spin { 100% { -ms-transform: rotate(180deg);} }
+    @-o-keyframes spin { 100% { -o-transform: rotate(180deg);}}
+
 }

@@ -3,12 +3,16 @@
 <head>
 	<title>Nunez | Home</title>
 	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/style.css">
 	<meta charset="utf-8">
 </head>
 <body>
 
 <section id="homepage">
-	<img src="img/catlogo.png" alt="kaitlyn nunez logo">
+	<picture>
+		<source media="(min-width:800px)" srcset="img/catlogo_big.png">
+		<img src="img/catlogo.png" alt="kaitlyn nunez logo">
+	</picture>
 	
 	<div class="title">
 		<p class="name">Kaitlyn Nunez</p>
@@ -18,19 +22,39 @@
 
 <section id="work">
 	<div class="webLink">
-		<a href="#"><img class="web" src="img/web_icon.png" alt="link to web work"></a>
-		
+		<a href="web.html">
+			<picture>
+			
+			<source media="(min-width:800px)" srcset="img/web_icon_big.png">
+			
+			<img class="web" src="img/web_icon.png" alt="link to web work">
+			</picture>
+		</a>
+
 		<p>Web</p>
 	</div>
 
 	<div class="artLink">
-		<a href="art.html"><img class="art" src="img/art_icon.png" alt="link to graphic work"></a>
+		<a href="art.html">
+			<picture>
+
+			<source media="(min-width:800px)" srcset="img/art_icon_big.png">
+			
+			<img class="art" src="img/art_icon.png" alt="link to graphic work">
+			</picture>
+		</a>
+		
 		<p>Art</p>
 	</div>
 </section>
 
 <section id="about">
+	<picture>
+	<source media="(min-width:1000px)" srcset="img/me_big.png">
+	<source media="(min-width:300px" srcset="img/me_medium.png">
 	<img src="img/me.png" alt="a picture of me">
+	</picture>
+
 
 	<div class="des">
 	<p> Hello! My name is Kaitlyn Nunez. I am in my 3rd year in Drexel University. I was in the Game Art and Production major for 2 years. I then switched my major to Interactive Digital Media, when I discovered my passion for web design.</p>
@@ -51,6 +75,7 @@
 	</ul>
 </nav>
 
-<footer> copyright kaitlyn nunez</footer>
+<footer> copyright kaitlyn nunez</footer>	
+<script type="js/main.js"></script>
 </body>
 </html>

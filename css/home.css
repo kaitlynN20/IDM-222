@@ -4,18 +4,41 @@ section {
   min-height: 100vh;
 }
 
-#homepage {background-color: #F9BF5D;}
-
-#homepage img{
-  padding-top: 15rem;
-  padding-left: 4rem;
-
+section#homepage {
+  background-color: #F9BF5D;
 }
 
-#homepage p{
+#homepage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-flow: column wrap;
+}
+
+/*fade in animation*/
+#homepage picture img{
+  padding-bottom: 3rem;
+
+  -webkit-animation: fade 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fade 3s; /* Firefox < 16 */
+        -ms-animation: fade 3s; /* Internet Explorer */
+         -o-animation: fade 3s; /* Opera < 12.1 */
+            animation: fade 3s;
+}
+
+    @-moz-keyframes fade { from{ opacity: 0; } to{ opacity: 1; } }
+    @-webkit-keyframes fade { from {opacity: 0;} to{opacity: 1;} }
+    @keyframes fade { from{opacity: 0;}to{opacity: 1;} }
+    @-ms-keyframes fade{ from {opacity: 0;} to{opacity: 1;} }
+    @-o-keyframes fade{from{opacity: 0;} to{opacity: 1;}}
+
+
+
+
+#homepage .title p{
   font-family: 'blackout2_am';
   color: #36123B;
-  font-size: 2rem;
 
   text-align: center;
 
@@ -23,19 +46,47 @@ section {
   margin: 0;
 }
 
-#homepage p.name{
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-
+#homepage .title p.name{
   font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+#homepage .title p.second{font-size: 2rem;}
+
+section#work{ 
+    background-image:
+    linear-gradient(#F9BF5D,#36123B);
+
+    /* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
+  background-image:
+    -webkit-gradient(linear from(#F9BF5D), to(#36123B));
+  
+  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background-image:
+    -webkit-linear-gradient(#F9BF5D,#36123B);
+
+  /* Firefox 3.6 - 15 */
+  background-image:
+    -moz-linear-gradient(#F9BF5D, #36123B);
+
+  /* Opera 11.1 - 12 */
+  background-image:
+    -o-linear-gradient( #F9BF5D, #36123B);
+
+  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-image:
+    linear-gradient(#F9BF5D, #36123B);
+
 }
 
 
 #work {  
-  background-image:
-    linear-gradient(#F9BF5D,#36123B);
-
   text-align: center;
+  
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 #work p{ 
@@ -48,28 +99,16 @@ section {
   padding-bottom: 3rem;
 }
 
-#work a{
-  width:361px;
-  height:427px;
+section#about{ background-color: #36123B;}
+
+#about{
+  display: flex;
+  flex-flow: column nowrap;
+
+  justify-content: center;
+  align-items: center;
 }
 
-#work a img.web{
-  padding-top: 5rem;
-}
-
-#work a img.art{
-  padding-top: 2rem;
-}
-
-#about{ background-color: #36123B;}
-
-#about img{
- padding-left: 7rem;
- padding-top: 4rem;
- padding-bottom: 2rem;
-
- width: 80%;
-}
 
 #about p{
   padding-left: 4rem;
@@ -80,72 +119,19 @@ section {
   font-size: 1.5rem;
 }
 
-
-/*NAV */
-nav {
-  height: 9rem;
-  position: fixed;
-  right: 11rem;
-  top: 1rem;
-  width: 3.13rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li{ padding-right: 2rem;}
-
-nav ul li.homeIcon{padding-right:3rem;}
-
-nav ul li a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  width: 2rem;
-}
-
-nav ul li a::before{
-  font-size: 2rem;
-}
-
-nav ul li.homeIcon a::before{content: url('../img/home_icon.png');}
-nav ul li.workIcon a::before {content: url('../img/portfolio_icon.png');}
-nav ul li.aboutIcon a::before{content: url('../img/about_icon.png');}
-
-
-nav ul li.homeIcon a:hover::before {content: url('../img/homeIcon_hover.png');}
-nav ul li.workIcon a:hover::before {content: url('../img/portfolioIcon_hover.png');}
-nav ul li.aboutIcon a:hover::before {content: url('../img/aboutIcon_hover.png');}
-
-
-footer{
-  text-align: center;
-  width: 100%;
-  height: 4rem;
-}
+footer{background-color: #36123B;}
 
 
 /*750px*/ @media all and (min-width: 45rem){
   
-  #homepage img{
-    padding-left: 7rem;
+  #work .webLink {
+    padding-top: 2rem;
   }
 
-  #work a img.web{
-    padding-top: 3rem;
-  }
+  #work p{font-size:5rem;}
 
-  #work a img.art{
-    padding-top: 1rem;
-  }
-
-  #about img{
-    padding-left: 8.5rem;
-    width: 80%; 
+  #about picture{
+    padding-top: 2rem;
   }
 
   #about p{
@@ -162,26 +148,44 @@ footer{
 
 
 /*1000px*/ @media all and (min-width:70rem){
-  #homepage img{
-    float: left;
-  }
+  #homepage{flex-flow: row wrap;}
 
-  #homepage .title{
-    float: right;
-
-    padding-top: 20rem;
-    padding-right: 10rem;
-  }
+  #homepage picture{padding-right: 3rem;}
+  #homepage .title p.name{font-size: 5rem;}
 
   #work{
-    display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
-
-    padding-top: 10rem;
   }
 
-  #work .artLink{
-    top: 3rem;
+  /* spinny animation*/
+  #work a picture img:hover{
+    -webkit-animation:spin 2s linear;
+    -moz-animation:spin 2s linear;
+    animation:spin 2s linear;
+    animation-timing-function: ease-out;
   }
+
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+    @-ms-keyframes spin { 100% { -ms-transform: rotate(360deg);} }
+    @-o-keyframes spin { 100% { -o-transform: rotate(360deg);}}
+
+  #about{
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: center;
+
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+
+  }
+  #about picture{
+    padding: 0;
+    padding-left: 2rem;
+  }
+
+  #about p{padding-right: 2rem;}
 
 }
